@@ -1,0 +1,40 @@
+body {
+	background-image: url('../images/JnkWOp.jpg');
+	background-attachment: fixed;
+}
+
+nav {
+	border-radius: 0 !important;
+}
+
+nav button {
+	border-radius: 0 !important;
+	background-color: grey !important;
+}
+
+hr {
+	background-color: grey;
+}
+
+nav button:hover {
+	background-color: tan !important;
+}
+
+div.jumbotron {
+	background-image: url('../images/white-background.png');
+	background-size: 500px;
+	text-align: center;
+	margin-top: -1.45em;
+	color: black;
+}
+
+article {
+	
+	padding: 0 1em;
+	border-radius: .5em;
+	margin-bottom: 1em;
+}
+
+div.container {
+	margin-top: -2.15em;
+}
