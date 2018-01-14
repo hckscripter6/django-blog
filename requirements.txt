@@ -1,5 +1,6 @@
 Django==2.0.1
-django-froala-editor==2.7.3
+django-ckeditor==5.4.0
+django-js-asset==0.1.1
 gunicorn==19.7.1
 Pillow==5.0.0
 psycopg2==2.7.3.2

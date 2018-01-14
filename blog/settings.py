@@ -25,13 +25,14 @@ SECRET_KEY = '5uj@xe3fx8+ad)5rh%n_1og+!*#k9!1%0v*6ge_fr4o)f$l1k7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com']
+ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com',
+				 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-	'froala_editor',
+	'ckeditor',
 	'posts',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,6 +122,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 900,
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
