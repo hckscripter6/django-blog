@@ -1,5 +1,12 @@
 {% extends "blog/base.html" %}
 
+{% block jumbotron %}
+<div class="jumbotron">
+	<h2>Hunter Krieger</h2>
+	<h3>Blogger, Web Developer, Gamer and Bibliophile</h3>
+</div>
+{% endblock %}
+	
 {% block content %}
 
 {% for display in posts %}
@@ -10,10 +17,9 @@
 		<h4>by {{ display.author }}</h4>
 		
 		<div class="body">
-		{{ display.body | truncatechars:500 | safe }}
+		{{ display.body | truncatechars:750 | safe }}<a href="{% url 'single' display.slug %}">see more</a>
 		</div>
 	</article>
-	<hr>
 {% endfor %}
 
 {% endblock %}
