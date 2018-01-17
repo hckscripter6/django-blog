@@ -20,6 +20,5 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('ckeditor/', include('ckeditor_uploader.urls')),
-	path('post', include('posts.urls')),
-	path('', views.index, name="index")
+	path('', include('posts.urls'))
 ]

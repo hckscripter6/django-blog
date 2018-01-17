@@ -8,9 +8,12 @@ class Category(models.Model):
 	
 	def __str__(self):
 		return "%s" % (self.name)
+		
+	class Meta:
+		verbose_name_plural = 'Categories'
 	
 class Tag(models.Model):
-	name = models.CharField(max_length=90)
+	name = models.CharField(max_length=90, blank=True, null=True)
 	
 	def __str__(self):
 		return "%s" % (self.name)
@@ -18,7 +21,7 @@ class Tag(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length=90)
 	subtitle = models.CharField(max_length=150)
-	image = models.ImageField(upload_to='static/images')
+	image = models.ImageField(upload_to='static/images', null=True, blank=True)
 	slug = models.SlugField(max_length=99)
 	date_added = models.DateTimeField(default=timezone.now)
 	author = models.CharField(max_length=60, default='Hunter Krieger')
