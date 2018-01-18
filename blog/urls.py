@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from posts import views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('ckeditor/', include('ckeditor_uploader.urls')),
-	path('', include('posts.urls'))
+	path('', include('posts.urls')),
+	path('about', views.about, name="about"),
+	path('contact', views.contact, name="contact")
 ]
