@@ -15,9 +15,11 @@
 		<h3><strong>{{ display.subtitle }}</strong></h3>
 		<h4>published {{ display.date_published }}</h4>
 		<h4>by {{ display.author }}</h4>
-		
+		{% if display.image %}
+			<img src="{{ display.image.url }}">
+		{% endif %}		
 		<div class="body">
-		{{ display.body | truncatechars:750 | safe }}<a href="{% url 'single' display.slug %}">see more</a>
+		{{ display.body | truncatechars:750 | safe }}...<a href="{% url 'single' display.slug %}">see more</a>
 		</div>
 	</article>
 {% endfor %}

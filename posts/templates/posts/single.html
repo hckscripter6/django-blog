@@ -7,7 +7,9 @@
 		<h3><strong>{{ post.subtitle }}</strong></h3>
 		<h4>published {{ post.date_published }}</h4>
 		<h4>by {{ post.author }}</h4>
-		
+		{% if post.image %}
+			<img src="../{{ post.image.url }}">
+		{% endif %}	
 		<div class="body">
 		{{ post.body | safe }}
 		</div>

@@ -36,8 +36,8 @@ nav button:hover {
 }
 
 div.jumbotron {
-	background-image: url('../images/white-background.png');
-	background-size: 500px;
+	background-image: url('../images/grid.png');
+	background-size: 1050px;
 	text-align: center;
 	color: black;
 	border-bottom: 2px solid black;
@@ -50,6 +50,10 @@ div.jumbotron {
 article,
 div.about {
 	border: 2px outset black;
+	-moz-border: 2px outset black;
+	-ms-border: 2px outset black;
+	-o-border: 2px outset black;
+	-webkit-border: 2px outset black;
 	border-radius: 5px;
 	margin-top: 1em;
 	padding: 0 1em;
@@ -59,12 +63,20 @@ article:last-child {
 	margin-bottom: 1em;
 }
 
+article img {
+	height: 15em;
+	border: 1px solid black;
+	margin-bottom: .5em;
+}
+
 article h3 {
 	margin: 0;
 }
 
 article h2 {
 	font-size: 2.25em;
+	margin-top: .25em;
+	margin-bottom: .25em;
 }
 
 div.about p,

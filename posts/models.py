@@ -21,7 +21,7 @@ class Tag(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length=90)
 	subtitle = models.CharField(max_length=150)
-	image = models.ImageField(upload_to='static/images', null=True, blank=True)
+	image = models.ImageField(upload_to='static/images/posts', null=True, blank=True)
 	slug = models.SlugField(max_length=99)
 	date_added = models.DateTimeField(default=timezone.now)
 	author = models.CharField(max_length=60, default='Hunter Krieger')
