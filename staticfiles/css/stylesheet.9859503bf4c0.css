@@ -1,5 +1,5 @@
 body {
-	background-image: url('../images/JnkWOp.jpg');
+	background-image: url("../images/JnkWOp.23d9cb6f59f0.jpg");
 	background-attachment: fixed;
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -36,7 +36,7 @@ nav button:hover {
 }
 
 div.jumbotron {
-	background-image: url('../images/grid.png');
+	background-image: url("../images/grid.2d872246dc67.png");
 	background-size: 1050px;
 	text-align: center;
 	color: black;
