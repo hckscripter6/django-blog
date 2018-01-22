@@ -43,11 +43,21 @@
 	
 	<div class="container">
 	{% block container %}
-		<section class="content">
-		{% block content %}
+		<div class="row">
+			<section class="content col-md-9">
+			{% block content %}
 
-		{% endblock %}
-		</section>
+			{% endblock %}
+			</section>
+			
+			<section class="sidebar col-md-3">
+			{% block sidebar %}
+				<aside>
+					<h2>Sidebar</h2>
+				</aside>
+			{% endblock %}
+			</section>
+		</div>
 	{% endblock %}
 	</div>
 

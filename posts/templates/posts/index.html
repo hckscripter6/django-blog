@@ -2,8 +2,10 @@
 
 {% block jumbotron %}
 <div class="jumbotron">
-	<h2>Hunter Krieger</h2>
-	<h3>Blogger, Web Developer, Gamer and Bibliophile</h3>
+	<div class="banner">
+		<h2>Hunter Krieger</h2>
+		<h3>Blogger, Web Developer, Gamer and Bibliophile</h3>
+	</div>
 </div>
 {% endblock %}
 	
@@ -11,15 +13,17 @@
 
 {% for display in posts %}
 	<article>
-		<h2><a href="{% url 'single' display.slug %}">{{ display.title }}</a></h2>
-		<h3><strong>{{ display.subtitle }}</strong></h3>
-		<h4>published {{ display.date_published }}</h4>
-		<h4>by {{ display.author }}</h4>
+		<div class="post-info">
+			<h2><a href="{% url 'single' display.slug %}">{{ display.title }}</a></h2>
+			<h3><strong>{{ display.subtitle }}</strong></h3>
+			<h4>published {{ display.date_published }}</h4>
+			<h4>by {{ display.author }}</h4>
+		</div>
 		{% if display.image %}
 			<img src="{{ display.image.url }}">
 		{% endif %}		
 		<div class="body">
-		{{ display.body | truncatechars:750 | safe }}...<a href="{% url 'single' display.slug %}">see more</a>
+		{{ display.body | truncatechars:550 | safe }}<a class="btn btn-xs btn-primary" href="{% url 'single' display.slug %}">read more</a>
 		</div>
 	</article>
 {% endfor %}
