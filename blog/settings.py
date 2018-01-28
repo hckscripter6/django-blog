@@ -26,7 +26,8 @@ SECRET_KEY = '5uj@xe3fx8+ad)5rh%n_1og+!*#k9!1%0v*6ge_fr4o)f$l1k7'
 DEBUG = True
 
 ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com',
-				 'localhost']
+				 'localhost',
+				 'www.hckrieger.com']
 
 
 # Application definition
@@ -34,7 +35,6 @@ ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com',
 INSTALLED_APPS = [
 	'ckeditor',
 	'posts',
-	'vast-cliffs-31137',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
