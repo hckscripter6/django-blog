@@ -1,7 +1,8 @@
 body {
-	background-image: url('../images/JnkWOp.jpg');
+	background-image: url('../images/background.png');
 	background-attachment: fixed;
 	font-family: 'Roboto Condensed', sans-serif;
+	margin-bottom: 1em;
 }
 
 nav {
@@ -111,8 +112,6 @@ article blockquote {
 } 
 
 @media (max-width: 767px) {
-	body {
-		background-attachment: initial;
-	}
+	
 
 }
