@@ -60,10 +60,10 @@ aside,
 div.about,
 div.contact {
 	border: 2px outset #c9c9c9;
-	-moz-border: 2px outset black;
-	-ms-border: 2px outset grey;
-	-o-border: 2px outset grey;
-	-webkit-border: 2px outset grey;
+	-moz-border: 2px outset #c9c9c9;
+	-ms-border: 2px outset #c9c9c9;
+	-o-border: 2px outset #c9c9c9;
+	-webkit-border: 2px outset #c9c9c9;
 	border-radius: 5px;
 	margin-top: 1em;
 	padding: 0 1em;
