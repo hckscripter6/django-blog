@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com',
 INSTALLED_APPS = [
 	'ckeditor',
 	'posts',
-	'www.hckrieger.com',
+	'vast-cliffs-31137',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
