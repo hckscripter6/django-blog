@@ -55,15 +55,12 @@ div.jumbotron div.banner {
 aside {
 	margin-left: -1em;
 }
+
 article,
 aside,
 div.about,
 div.contact {
 	border: 2px outset #c9c9c9;
-	-moz-border: 2px outset #c9c9c9;
-	-ms-border: 2px outset #c9c9c9;
-	-o-border: 2px outset #c9c9c9;
-	-webkit-border: 2px outset #c9c9c9;
 	border-radius: 5px;
 	margin-top: 1em;
 	padding: 0 1em;
@@ -101,4 +98,21 @@ article blockquote {
 	line-height: 1.45em;
 }
 
+@media screen and (max-width: 990px) {
 
+	aside {
+		margin-left: 0;
+	}
+	
+	div.container {
+		margin: -.25em;
+	}
+	
+} 
+
+@media (max-width: 767px) {
+	body {
+		background-attachment: initial;
+	}
+
+}

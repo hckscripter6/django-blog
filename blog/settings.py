@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5uj@xe3fx8+ad)5rh%n_1og+!*#k9!1%0v*6ge_fr4o)f$l1k7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com',
 				 'localhost',

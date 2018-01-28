@@ -37,7 +37,7 @@ nav button:hover {
 
 div.jumbotron {
 	background-image: url('../images/grid.png');
-	background-size: 1050px;
+	background-size: 1750px;
 	text-align: center;
 	color: black;
 	border-bottom: 2px solid black;
@@ -47,13 +47,20 @@ div.jumbotron {
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+div.jumbotron div.banner {
+	background-color: rgba(205, 182, 206, .25);
+	padding: .1em 0;
+}
+
+aside {
+	margin-left: -1em;
+}
+
 article,
-div.about {
-	border: 2px outset black;
-	-moz-border: 2px outset black;
-	-ms-border: 2px outset black;
-	-o-border: 2px outset black;
-	-webkit-border: 2px outset black;
+aside,
+div.about,
+div.contact {
+	border: 2px outset #c9c9c9;
 	border-radius: 5px;
 	margin-top: 1em;
 	padding: 0 1em;
@@ -64,26 +71,37 @@ article:last-child {
 }
 
 article img {
-	height: 15em;
-	border: 1px solid black;
-	margin-bottom: .5em;
+	height: 12.5em;
+	border: 1px solid grey;
+	float: left;
+	margin-right: 1em;
 }
+
+
+
 
 article h3 {
 	margin: 0;
 }
 
 article h2 {
-	font-size: 2.25em;
+	font-size: 2.35em;
 	margin-top: .25em;
-	margin-bottom: .25em;
+	margin-bottom: .15em;
 }
 
 div.about p,
 article p,
 article li,
 article blockquote {
-	font-size: 1.25em;
+	font-size: 1.2em;
+	line-height: 1.45em;
 }
 
+@media screen and (max-width: 990px) {
 
+	aside {
+		margin-left: -1em;
+	}
+	
+} 
