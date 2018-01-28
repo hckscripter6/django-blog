@@ -111,7 +111,12 @@ article blockquote {
 	
 } 
 
-@media (max-width: 767px) {
-	
+@media (max-width: 475px) {
+	article img {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin: .25em 0;
+	}
 
 }
