@@ -1,7 +1,17 @@
 from django.shortcuts import render
+from posts.views import Post
+
+five = Post.objects.filter(published=True).all()[:5]
 
 def about(request):
-	return render(request, 'blog/about.html')
+	context = {'five' : five}
+	return render(request, 'blog/about.html', context)
 	
 def contact(request):
-	return render(request, 'blog/contact.html')
+	context = {'five' : five}
+	return render(request, 'blog/contact.html', context)
+	
+def posts(request):
+	post = Post.objects.all()[:5]
+	context = {'post' : post, 'five' : five}
+	return render(request, 'blog/base.html', context)
