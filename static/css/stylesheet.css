@@ -71,7 +71,7 @@ article:last-child {
 	margin-bottom: 1em;
 }
 
-article img {
+article img.post-image {
 	height: 12.5em;
 	border: 1px solid grey;
 	float: left;
@@ -112,7 +112,7 @@ article blockquote {
 } 
 
 @media (max-width: 475px) {
-	article img {
+	article img.post-image {
 		float: none;
 		width: 100%;
 		height: auto;
