@@ -19,7 +19,7 @@ class Tag(models.Model):
 		return "%s" % (self.name)
 	
 class Post(models.Model):
-	title = models.CharField(max_length=90)
+	title = models.CharField(max_length=100)
 	subtitle = models.CharField(max_length=150)
 	image = models.ImageField(upload_to='static/images/posts', null=True, blank=True)
 	slug = models.SlugField(max_length=99)

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from posts.views import Post
 
-five = Post.objects.filter(published=True).all()[:5]
+five = Post.objects.filter(published=True).order_by("-date_published").all()[:5]
 
 def about(request):
 	context = {'five' : five}
