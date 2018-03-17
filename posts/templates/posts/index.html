@@ -23,7 +23,7 @@
 			<img class="post-image" src="{{ display.image.url }}">
 		{% endif %}		
 		<div class="body">
-		{{ display.body | truncatechars:550 | safe }}<a class="btn btn-xs btn-primary" href="{% url 'single' display.slug %}">read more</a>
+		{{ display.body | truncatechars:600 | safe }}<a class="btn btn-xs btn-primary" href="{% url 'single' display.slug %}">read more</a>
 		</div>
 	</article>
 {% endfor %}
