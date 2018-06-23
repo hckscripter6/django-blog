@@ -31,6 +31,7 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  <ul class="nav navbar-nav navbar-right">
 			<li><a href="{% url 'index' %}">Home</a></li>
+			<li><a href="{% url 'posts' %}">Posts</a></li>
 			<li><a href="{% url 'about' %}">About</a></li>
 			<li><a href="{% url 'contact' %}">Contact</a></li>
 		  </ul>
@@ -46,22 +47,22 @@
 	{% block container %}
 		<div class="row">
 			<section class="content col-md-9">
-			{% block content %}
+				{% block content %}
 
-			{% endblock %}
+				{% endblock %}
 			</section>
 			
 			<section class="sidebar col-md-3">
-			{% block sidebar %}
-				<aside>
-					<h2>Recent Posts</h2>
-					<ul>
-					{% for display in five %}
-						<li><a href="{% url 'single' display.slug %}">{{ display.title }}</a></li>
-					{% endfor %}
-					</ul>
-				</aside>
-			{% endblock %}
+				{% block sidebar %}
+					<aside>
+						<h2>Recent Posts</h2>
+						<ul>
+						{% for display in five %}
+							<li><a href="{% url 'single' display.slug %}">{{ display.title }}</a></li>
+						{% endfor %}
+						</ul>
+					</aside>
+				{% endblock %}
 			</section>
 		</div>
 	{% endblock %}
