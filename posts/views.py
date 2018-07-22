@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Post, Category
 # Create your views here.
 
-five = Post.objects.filter(published=True).order_by("-date_published").all()[:5]
+five = Post.objects.filter(published=True).order_by("-date_published").all()[:3]
 
 def index(request):
 	posts = Post.objects.filter(published=True).order_by("-date_published").all()
