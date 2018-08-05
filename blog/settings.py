@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['vast-cliffs-31137.herokuapp.com',
 INSTALLED_APPS = [
 	'ckeditor',
 	'posts',
+    'storages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -131,7 +132,9 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
+AWS_QUERYSTRING_AUTH = False
+
+CKEDITOR_UPLOAD_PATH = "https://s3.amazonaws.com/hckrieger-app/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -145,5 +148,7 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 

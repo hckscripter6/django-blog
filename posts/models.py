@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from storages.backends.s3boto3 import S3Boto3Storage
 
 # Create your models here.
 class Category(models.Model):
@@ -21,7 +22,7 @@ class Tag(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length=100)
 	subtitle = models.CharField(max_length=100)
-	image = models.ImageField(upload_to='static/images/posts', null=True, blank=True)
+	image = models.ImageField(storage=S3Boto3Storage(bucket='hckrieger-app'), null=True, blank=True)
 	slug = models.SlugField(max_length=99)
 	date_added = models.DateTimeField(default=timezone.now)
 	author = models.CharField(max_length=60, default='Hunter Krieger')

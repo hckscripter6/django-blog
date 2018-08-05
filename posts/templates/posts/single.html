@@ -14,7 +14,7 @@
 			<h4>by {{ post.author }}</h4>
 		</div>
 		{% if post.image %}
-			<img class="post-image" src="../{{ post.image.url }}">
+			<img class="post-image" src="{{ post.image.url }}">
 		{% endif %}	
 		<div class="body">
 		{{ post.body | safe }}
