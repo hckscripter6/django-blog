@@ -6,7 +6,7 @@ from .models import Post, Category
 five = Post.objects.filter(published=True).order_by("-date_published").all()[:3]
 
 def index(request):
-	posts = Post.objects.filter(published=True).order_by("-date_published").all()
+	posts = Post.objects.filter(published=True).order_by("-date_published").all()[:5]
 	context = {'posts' : posts, 'five' : five}
 	return render(request, 'posts/index.html', context)
 
