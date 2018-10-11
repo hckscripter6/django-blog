@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5uj@xe3fx8+ad)5rh%n_1og+!*#k9!1%0v*6ge_fr4o)f$l1k7'
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,16 +81,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6h6veu97df6je',
-		'USER': 'zkxmxlimcpwrbj',
-		'PASSWORD':   '21383c420d73398a476f2aefd1faa6a0c03d000a036d671bbce3bc77d7f47fcb',
-		'HOST': 'ec2-54-221-251-195.compute-1.amazonaws.com',
-		'PORT': '5432',
-    }
-}
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(default=os.environ['DATABASE_URL'], conn_max_age=600)
 
 
 # Password validation
@@ -133,6 +126,7 @@ CKEDITOR_CONFIGS = {
 }
 
 AWS_QUERYSTRING_AUTH = False
+
 
 CKEDITOR_UPLOAD_PATH = "https://s3.amazonaws.com/hckrieger-app/"
 
