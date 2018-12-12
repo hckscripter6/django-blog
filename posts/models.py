@@ -20,8 +20,8 @@ class Tag(models.Model):
 		return "%s" % (self.name)
 	
 class Post(models.Model):
-	title = models.CharField(max_length=150)
-	subtitle = models.CharField(max_length=150)
+	title = models.CharField(max_length=200)
+	subtitle = models.CharField(max_length=200)
 	image = models.ImageField(storage=S3Boto3Storage(bucket='hckrieger-app'), null=True, blank=True)
 	slug = models.SlugField(max_length=99)
 	date_added = models.DateTimeField(default=timezone.now)
