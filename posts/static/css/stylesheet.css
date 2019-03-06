@@ -1,0 +1,203 @@
+body {
+	background-image: url('../images/background.png');
+	background-attachment: fixed;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-bottom: 1em;
+}
+
+nav {
+	border-radius: 0 !important;
+	margin-bottom: 0 !important;
+	
+}
+
+nav h1 {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: .1em;
+	color: white;
+}
+
+nav li a {
+	color: white !important;
+}
+
+nav button {
+	border-radius: 0 !important;
+	background-color: grey !important;
+}
+
+hr {
+	background-color: grey;
+}
+
+nav button:hover {
+	background-color: tan !important;
+}
+
+div.jumbotron {
+	background-image: url('../images/grid.png');
+	background-size: 1750px;
+	text-align: center;
+	color: black;
+	border-bottom: 2px solid black;
+	margin-bottom: 0;
+	height: 248px;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: .075em;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+div.jumbotron div.banner {
+	background-color: rgba(205, 182, 206, .25);
+	padding: .1em 0;
+	margin-top: 1em;
+}
+
+aside {
+	margin-left: -1em;
+}
+
+aside ul li {
+	margin-left: -1.75em;
+	margin-bottom: .5em;
+	font-size: 1.025em;
+}
+
+article,
+aside,
+div.about,
+div.posts,
+div.contact {
+	border: 2px outset grey;
+	border-radius: 5px;
+	margin-top: 1em;
+	padding: 0 1em;
+	overflow: hidden;
+}
+
+article:last-child {
+	margin-bottom: 1em;
+}
+
+article img.post-image {
+	height: 12.5em;
+	border: 1px solid grey;
+	float: left;
+	margin-right: 1em;
+}
+
+
+
+
+article h3 {
+	margin: 0;
+}
+
+article h2 {
+	font-size: 2.35em;
+	margin-top: .25em;
+	margin-bottom: .15em;
+}
+
+div.about p,
+article p,
+article li,
+article blockquote {
+	font-size: 1.2em;
+	line-height: 1.45em;
+}
+
+div.posts h2 {
+	margin: .25em;
+}
+
+div.posts h3 {
+	font-size: 1.5em;
+}
+
+div.posts h4 {
+	font-size: 1.35em;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+
+@media screen and (max-width: 990px) {
+
+	aside {
+		margin-left: 0;
+	}
+
+	div.container {
+	
+		width: 100%;
+	}
+
+	div.jumbotron {
+		height: 220px;
+	}
+
+	div.jumbotron div.banner {
+		margin-top: 0;
+	}
+	
+	article h3 {
+		font-size: 1.5em;
+		margin: 0;
+	}
+	
+	article h2 {
+		font-size: 2em;
+	}
+
+	div.posts h3 {
+		font-size: 1.35em;
+		margin: .5em 0;
+	}
+
+	div.posts h4 {
+		font-size: 1.15em;
+	}
+
+
+
+	
+} 
+
+@media screen and (max-width: 767px) {
+	div.jumbotron div.banner {
+		margin-top: 1.5em;
+	}
+}
+
+@media (max-width: 475px) {
+	div.jumbotron {
+		height: 200px;
+	}
+
+	div.jumbotron div.banner {
+		margin-top: 0;
+	}
+
+	article img.post-image {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin: .15em 0;
+	}
+
+	article h3 {
+		font-size: 1.25em;
+		margin: 0;
+	}
+	
+	article h2 {
+		font-size: 1.75em;
+	}
+
+}
