@@ -128,8 +128,6 @@ CKEDITOR_CONFIGS = {
 AWS_QUERYSTRING_AUTH = False
 
 
-CKEDITOR_UPLOAD_PATH = "https://s3.amazonaws.com/hckrieger-app/"
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
@@ -142,8 +140,6 @@ STATIC_URL = '/static/'
 #)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
