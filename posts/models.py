@@ -22,7 +22,7 @@ class Tag(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length=200)
 	subtitle = models.CharField(max_length=200)
-	image = models.ImageField(storage=S3Boto3Storage(bucket='hckrieger-app'), null=True, blank=True)
+	image = models.ImageField(null=True, blank=True)
 	slug = models.SlugField(max_length=99)
 	date_added = models.DateTimeField(default=timezone.now)
 	author = models.CharField(max_length=60, default='Hunter Krieger')
