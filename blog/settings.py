@@ -128,7 +128,7 @@ CKEDITOR_CONFIGS = {
 AWS_QUERYSTRING_AUTH = False
 
 
-CKEDITOR_UPLOAD_PATH = "https://s3.amazonaws.com/hckrieger-app/"
+CKEDITOR_UPLOAD_PATH = "https://s3.amazonaws.com/" + os.environ.get('AWS_STORAGE_BUCKET_NAME') + "/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
