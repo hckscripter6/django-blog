@@ -57,7 +57,7 @@
 					<aside>
 						<h2>Recent Posts</h2>
 						<ul>
-						{% for display in five %}
+						{% for display in sidebar_posts %}
 							<li><a href="{% url 'single' display.slug %}">{{ display.title }}</a></li>
 						{% endfor %}
 						</ul>
