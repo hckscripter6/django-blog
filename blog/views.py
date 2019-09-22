@@ -15,4 +15,4 @@ def posts(request):
 def listPosts(request):
 	posts = Post.objects.filter(published=True).order_by("-date_published").all()
 	context = {'posts' : posts}
-	return render(request, 'blog/posts.html')
+	return render(request, 'blog/posts.html', {'posts': posts})
