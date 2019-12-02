@@ -11,24 +11,27 @@
 	
 {% block content %}
 
-{% for display in posts %}
-	<article>
-		<div class="post-info">
-			<h2><a href="{% url 'single' display.slug %}">{{ display.title }}</a></h2>
-			<h3><strong>{{ display.subtitle }}</strong></h3>
-			<h4>published {{ display.date_published }}</h4>
-			<h4>by {{ display.author }}</h4>
-		</div>
-		{% if display.image %}
-			<img class="post-image" src="{{ display.image.url }}">
-		{% endif %}		
-		<div class="body">
-		{{ display.body | truncatechars_html:600 | safe }}<a style="margin-bottom: 1em;" class="btn btn-xs btn-primary" href="{% url 'single' display.slug %}">read more</a>
-		</div>
-	</article>
-{% endfor %}
+<section id="homepage-post-loop">
+    {% for display in posts %}
+        <article>
+            <div class="post-info">
+                <h2><a href="{% url 'single' display.slug %}">{{ display.title }}</a></h2>
+                <h3><strong>{{ display.subtitle }}</strong></h3>
+                <h4>published {{ display.date_published }}</h4>
+                <h4>by {{ display.author }}</h4>
+            </div>
+            {% if display.image %}
+                <img class="post-image" src="{{ display.image.url }}">
+            {% endif %}		
+            <div class="body">
+            {{ display.body | truncatechars_html:600 | safe }}<a style="margin-bottom: 1em;" class="btn btn-xs btn-primary" href="{% url 'single' display.slug %}">read more</a>
+            </div>
+        </article>
+    {% endfor %}
+</section>
+
 <br>
-<a href="{% url 'posts' %}" class="btn btn-info btn-md">
+<a href="{% url 'posts' %}" class="btn btn-info btn-md more-post">
 	More Posts
 </a>
 

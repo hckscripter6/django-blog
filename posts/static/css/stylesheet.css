@@ -82,14 +82,19 @@ article:last-child {
 }
 
 article img.post-image {
-	height: 12.5em;
+	height: 13em;
 	border: 1px solid grey;
 	float: left;
-	margin-right: 1em;
+	margin: .5em 1em 0 0;
 }
 
+a.more-posts {
+    display: block;
+}
 
-
+section#homepage-post-loop article img.post-image {
+    margin-bottom: .5em;
+}
 
 article h3 {
 	margin: 0;
@@ -186,9 +191,9 @@ hr {
 
 	article img.post-image {
 		float: none;
-		width: 100%;
-		height: auto;
-		margin: .15em 0;
+        height: 12em;
+        display: block;
+		margin: .15em auto;
 	}
 
 	article h3 {
