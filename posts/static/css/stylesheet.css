@@ -82,7 +82,7 @@ article:last-child {
 }
 
 article img.post-image {
-	height: 13em;
+	height: 12em;
 	border: 1px solid grey;
 	float: left;
 	margin: .5em 1em 0 0;
@@ -191,7 +191,7 @@ hr {
 
 	article img.post-image {
 		float: none;
-        height: 12em;
+        height: 11em;
         display: block;
 		margin: .15em auto;
 	}
